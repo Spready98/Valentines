@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef} from 'react';
 import './Valentine.css'; // Ensure you have the corresponding CSS
 import catSit from './noImages/catSit.jpg'
 import catStare1 from './noImages/catStare1.jpg'
