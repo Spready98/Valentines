@@ -1,0 +1,13 @@
+.yesPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh
+
+}
+
+.gif {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}

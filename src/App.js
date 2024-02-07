@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Valentine from './Valentine';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import YesMessage from './YesMessagePage';
+import backgroundImage from './images/background.jpg';
+import Landing from './Landing';
 
 function App() {
+  useEffect(() => {
+    document.body.style.backgroundImage = `url(${backgroundImage})`;
+    document.body.style.backgroundSize = 'cover';
+
+    document.body.style.height = '100vh';
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundAttachment = 'fixed';
+
+    return () => {
+      document.body.style.backgroundImage = '';
+      document.body.style.backgroundSize = '';
+      document.body.style.height = '';
+      document.body.style.backgroundRepeat = '';
+      document.body.style.backgroundAttachment = '';
+    };
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Landing />} exact />
+        <Route path='/Valentines' element={<Valentine />} />
+        <Route path='/Yes-message' element={<YesMessage />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,27 @@
+/* Valentine.css */
+
+.valentine-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between buttons */
+
+  }
+  
+  .yesBtn, .noBtn {
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative; /* Start with relative positioning */
+    
+  }
+  
+  .noBtn {
+    transition: all 0.5s ease
+  }
